@@ -1,6 +1,6 @@
 import { useState } from "react"
-// import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
-// import useMediaQuery from "@/hooks/useMediaQuery"
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
+import useMediaQuery from "@/hooks/useMediaQuery"
 import Link from "./link"
 import type { SectionType } from '@/shared/types';
 import { useEffect } from "react";
@@ -14,8 +14,8 @@ type Props = {
 
 const Navbar = ({ selectedSection, setSelectedSection }: Props) => {
   const flexBetween = "flex items-center justify-between"
-  // const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
-  // const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
+  const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
+  const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isAtTop, setIsAtTop] = useState(true);
 
   const navBackground = isAtTop ? 'bg-transparent' : 'bg-secondary';
@@ -38,7 +38,7 @@ const Navbar = ({ selectedSection, setSelectedSection }: Props) => {
             </h1>
 
             {/* RIGHT SIDE */}
-            {/* { isAboveMediumScreens ? ( */}
+            { isAboveMediumScreens ? (
             <div className={`${flexBetween} w-full`}>
               <div className={`${flexBetween} gap-8 text-1xl`}>
               </div>
@@ -60,53 +60,53 @@ const Navbar = ({ selectedSection, setSelectedSection }: Props) => {
                 />
               </div>
             </div>
-            {/* ) : (
+            ) : (
             <button
                 className="rounded-full bg-secondary-500 p-2"
                 onClick={() => setIsMenuToggled(!isMenuToggled)}
               >
                 <Bars3Icon className="h-6 w-6 text-text-tertiary" />
               </button>
-            )} */}
+            )}
           </div>
         </div>
       </div>
 
-            {/* MOBILE MENU MODAL
+      {/* MOBILE MENU MODAL /*/}
       {!isAboveMediumScreens && isMenuToggled && (
         <div className="fixed right-0 bottom-0 z-40 h-full w-[300px] bg-primary drop-shadow-xl">
           {/* CLOSE ICON */}
-          {/* <div className="flex justify-end p-12">
+          <div className="flex justify-end p-12">
             <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
               <XMarkIcon className="h-6 w-6 text-text-primary" />
             </button>
           </div>
 
           {/* MENU ITEMS */}
-          {/* <div className="ml-[33%] flex flex-col gap-10 text-2xl">
+          <div className="text-secondary ml-[33%] flex flex-col gap-10 text-2xl">
             <Link
-              page="home"
+              page="Home"
               selectedSection={selectedSection}
               setSelectedSection={setSelectedSection}
             />
             <Link
-              page="buy?"
+              page="Buy?"
               selectedSection={selectedSection}
               setSelectedSection={setSelectedSection}
             />
             <Link
-              page="whatamilookingat"
+              page="What am I looking at"
               selectedSection={selectedSection}
               setSelectedSection={setSelectedSection}
             />
             <Link
-              page="testimony"
+              page="Testimonies"
               selectedSection={selectedSection}
               setSelectedSection={setSelectedSection}
             />
           </div>
         </div>
-      )} */}
+      )}
     </nav>
   )
 }

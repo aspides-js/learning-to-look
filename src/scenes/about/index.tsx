@@ -84,8 +84,8 @@ const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {useSectio
         <div className={`${isAboveMediumScreens ? 'max-w-6xl' : 'max-w-2xl'} mx-auto px-6 py-24 w-full`}>
           <div className="relative z-10 flex flex-col items-center justify-center min-h-screen">
               <div className="text-center mb-16">
-                <h1 className="text-[145px] text-text-tertiary font-cursive mb-1">
-                {/* <h1 className={`${isAboveMediumScreens ? 'text-9xl' : 'text-7xl'} text-text-tertiary font-cursive mb-1`}></h1>   */}
+                {/* <h1 className="text-[145px] text-text-tertiary font-cursive mb-1"> */}
+                <h1 className={`${isAboveMediumScreens ? 'text-[145px]' : 'text-8xl'} text-text-tertiary font-cursive mb-1`}>
                   The Vulva Mirror 
                 </h1>
                 <p className="text-text-tertiary text-3xl font-semibold font-sans">by Canesten<sup>®</sup></p>

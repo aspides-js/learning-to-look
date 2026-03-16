@@ -1,5 +1,4 @@
 import useMediaQuery from '@/hooks/useMediaQuery';
-import { useState } from 'react';
 
 type Props = {
   quote: string;

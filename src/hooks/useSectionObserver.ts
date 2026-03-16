@@ -10,7 +10,7 @@ export const useSectionObserver = ({ setSelectedSection }: Props) => {
     const sectionIds: SectionType[] = [
       "buy?",
       "whatamilookingat",
-      "testimony",
+      "testimonies",
     ];
 
     const elements = sectionIds

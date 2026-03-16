@@ -16,10 +16,6 @@ type Props = {
 const IntroPage = ({ selectedSection, setSelectedSection }: Props) => {useSectionObserver({ setSelectedSection });
   const [displayedText, setDisplayedText] = useState('');
   const fullText = "We simply invite you to look";
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: 'smooth' });
-  };
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
 
   useEffect(() => {

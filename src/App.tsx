@@ -1,7 +1,7 @@
 import { useState } from 'react'
 // import LandingPage from "@/scenes/landing";
 import IntroPage from "@/scenes/about";
-import type { PageType, SectionType } from './shared/types';
+import type { SectionType } from './shared/types';
 
 function App() {
   const [selectedSection, setSelectedSection] = useState<SectionType>('home');
